@@ -1,0 +1,41 @@
+{
+  "files": {
+    "static/js/0.5a6b555f.chunk.js": "/arcadio/static/js/0.5a6b555f.chunk.js",
+    "static/js/0.5a6b555f.chunk.js.map": "/arcadio/static/js/0.5a6b555f.chunk.js.map",
+    "main.css": "/arcadio/static/css/main.f57afcd5.chunk.css",
+    "main.js": "/arcadio/static/js/main.717a4d61.chunk.js",
+    "main.js.map": "/arcadio/static/js/main.717a4d61.chunk.js.map",
+    "runtime-main.js": "/arcadio/static/js/runtime-main.a3922836.js",
+    "runtime-main.js.map": "/arcadio/static/js/runtime-main.a3922836.js.map",
+    "static/js/3.dd1806f5.chunk.js": "/arcadio/static/js/3.dd1806f5.chunk.js",
+    "static/js/3.dd1806f5.chunk.js.map": "/arcadio/static/js/3.dd1806f5.chunk.js.map",
+    "static/js/4.b5fd22bd.chunk.js": "/arcadio/static/js/4.b5fd22bd.chunk.js",
+    "static/js/4.b5fd22bd.chunk.js.map": "/arcadio/static/js/4.b5fd22bd.chunk.js.map",
+    "static/js/5.65a79d8c.chunk.js": "/arcadio/static/js/5.65a79d8c.chunk.js",
+    "static/js/5.65a79d8c.chunk.js.map": "/arcadio/static/js/5.65a79d8c.chunk.js.map",
+    "static/js/6.871432fc.chunk.js": "/arcadio/static/js/6.871432fc.chunk.js",
+    "static/js/6.871432fc.chunk.js.map": "/arcadio/static/js/6.871432fc.chunk.js.map",
+    "static/js/7.d1889a90.chunk.js": "/arcadio/static/js/7.d1889a90.chunk.js",
+    "static/js/7.d1889a90.chunk.js.map": "/arcadio/static/js/7.d1889a90.chunk.js.map",
+    "static/js/8.73579d7a.chunk.js": "/arcadio/static/js/8.73579d7a.chunk.js",
+    "static/js/8.73579d7a.chunk.js.map": "/arcadio/static/js/8.73579d7a.chunk.js.map",
+    "static/js/9.4ce487ea.chunk.js": "/arcadio/static/js/9.4ce487ea.chunk.js",
+    "static/js/9.4ce487ea.chunk.js.map": "/arcadio/static/js/9.4ce487ea.chunk.js.map",
+    "static/js/10.e57df57d.chunk.js": "/arcadio/static/js/10.e57df57d.chunk.js",
+    "static/js/10.e57df57d.chunk.js.map": "/arcadio/static/js/10.e57df57d.chunk.js.map",
+    "static/js/11.0358a3d5.chunk.js": "/arcadio/static/js/11.0358a3d5.chunk.js",
+    "static/js/11.0358a3d5.chunk.js.map": "/arcadio/static/js/11.0358a3d5.chunk.js.map",
+    "index.html": "/arcadio/index.html",
+    "static/css/main.f57afcd5.chunk.css.map": "/arcadio/static/css/main.f57afcd5.chunk.css.map",
+    "static/js/0.5a6b555f.chunk.js.LICENSE.txt": "/arcadio/static/js/0.5a6b555f.chunk.js.LICENSE.txt",
+    "static/js/3.dd1806f5.chunk.js.LICENSE.txt": "/arcadio/static/js/3.dd1806f5.chunk.js.LICENSE.txt",
+    "static/js/5.65a79d8c.chunk.js.LICENSE.txt": "/arcadio/static/js/5.65a79d8c.chunk.js.LICENSE.txt",
+    "static/js/6.871432fc.chunk.js.LICENSE.txt": "/arcadio/static/js/6.871432fc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a3922836.js",
+    "static/js/5.65a79d8c.chunk.js",
+    "static/css/main.f57afcd5.chunk.css",
+    "static/js/main.717a4d61.chunk.js"
+  ]
+}
