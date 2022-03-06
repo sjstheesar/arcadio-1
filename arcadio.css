@@ -1,6 +1,7 @@
 body{
    background-image: url("bg.png");
    background-repeat: no-repeat;
+   background-size: 400%;
    background-size: cover;
     color:white;
 }
@@ -12,6 +13,13 @@ border-radius: 1px;}
     display: inline-block;
     padding: 5px;
    
+}
+
+.slides img{
+    height: 900px;
+    width:500px;
+border-radius: 1px;
+float:right;
 }
 header{
     height:300px;
@@ -31,13 +39,16 @@ header{
     border-radius: 5px;
     padding:5px 5px;
     background-color: black;
+   font-family: 'Nico moji',cursive;
 }
 .head{
+   float:right;
     padding-right: 10px;
 }
 .topic{
     display: inline-block;
     padding-left: 50px;
+   font-family: 'Nico moji',cursive;
     
 }
 .slides{
@@ -60,4 +71,43 @@ header{
 }
 img{
 
+}
+
+.two{
+    float:left;
+}
+.one{
+    float:right;
+}
+.con{
+    text-align: center;
+    padding-top: 10%;
+}
+.why{
+    padding-left: 5%;
+    padding-top: 5%;
+}
+.row1 img{
+    float:right;
+    height:400px;
+}
+.row2 img{
+    
+    float:left;
+    height:400px;
+}
+.row2{
+    padding-top: 400px;
+}
+.row3{
+    padding-top: 400px;
+    padding-left:50px;
+}
+.row3 img{
+    float: right;
+    height:300px;
+    
+}
+.topic img{
+    float:left;
 }
