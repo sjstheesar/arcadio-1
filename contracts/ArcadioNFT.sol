@@ -19,6 +19,7 @@ contract ArcadioNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
+    bool public publicMintEnabled = false;
     uint256 public price = 0.1 ether;
     uint256 public maxSupply = 999;
     address payable paymentAddress;
@@ -34,6 +35,10 @@ contract ArcadioNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 
     function _baseURI() internal pure override returns (string memory) {
         return "ipfs://";
+    }
+
+    function setPublicMintEnabled(bool enabled) public onlyOwner {
+        publicMintEnabled = enabled;
     }
 
     function setPrice(uint256 mintPrice) public onlyOwner {
@@ -58,7 +63,8 @@ contract ArcadioNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
-        creator[tokenId] = msg.sender;
+        emit NFTMinted(to, tokenId);
+        creator[tokenId] = to;
     }
 
     function payToMint(string memory metadataURI)
@@ -66,6 +72,7 @@ contract ArcadioNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
         payable
         returns (uint256)
     {
+        require(publicMintEnabled, "Minting not enabled yet ..");
         require(
             existingURIs[metadataURI] != 1,
             "Arcadio Machine NFT already minted!"
