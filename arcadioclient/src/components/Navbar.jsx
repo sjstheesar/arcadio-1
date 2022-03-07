@@ -3,7 +3,10 @@ import { HiMenuAlt4 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { ContractContext } from '../context/ContractContext';
 
-//import logo from '../../images/logo.jpeg';
+import logo from '../images/logo.png';
+import twitter from '../images/twitter.png';
+import medium from '../images/medium.png';
+import telegram from '../images/telegram.png';
 
 const NavbarItem = ({ title, classProps }) => {
     return (
@@ -18,6 +21,9 @@ const Navbar = () => {
 
     return (
         <nav className="w-full flex md:justify-center justify-between items-center p-4">
+            <div className="md:flex-[0.5]flex-initial justify-center items-center">
+                <img src={logo} alt="logo" className="w-8 cursor-pointer" />
+            </div>
             <div className="md:flex-[0.5]flex-initial justify-left items-left">
                 ARCADIO
             </div>
@@ -27,6 +33,15 @@ const Navbar = () => {
                     <NavbarItem key={item + index} title={item} />
                 ))}
             </ul>
+            <div className="md:flex-[1]flex-initial justify-center items-center">
+                <img src={twitter} alt="logo" className="w-8 cursor-pointer" />
+            </div>
+            <div className="md:flex-[0.5]flex-initial justify-center items-center">
+                <img src={medium} alt="logo" className="w-8 cursor-pointer" />
+            </div>
+            <div className="md:flex-[0.5]flex-initial justify-center items-center">
+                <img src={telegram} alt="logo" className="w-8 cursor-pointer" />
+            </div>
             {!currentAccount && (<button
                 type="button"
                 onClick={connectWallet}

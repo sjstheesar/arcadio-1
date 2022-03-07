@@ -1,4 +1,4 @@
-import { Navbar, ArcadioMain, Footer } from './components';
+import { Navbar, ArcadioMain, ArcadioServices, Footer } from './components';
 
 const App = () => {
   return (
@@ -6,6 +6,7 @@ const App = () => {
       <div className="gradient-bg-welcome">
         <Navbar />
         <ArcadioMain />
+        <ArcadioServices />
       </div>
       <Footer />
     </div>
