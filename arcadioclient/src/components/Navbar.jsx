@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+
 import { ContractContext } from '../context/ContractContext';
 
 import logo from '../images/logo.png';
@@ -24,22 +26,30 @@ const Navbar = () => {
             <div className="md:flex-[0.5]flex-initial justify-center items-center">
                 <img src={logo} alt="logo" className="w-8 cursor-pointer" />
             </div>
-            <div className="md:flex-[0.5]flex-initial justify-left items-left">
-                ARCADIO
+            <div className="md:flex-[0.5]flex-initial justify-left items-left p-1">
+                <Link to="/">ARCADIO</Link>
+            </div>
+            <div className="md:flex-[0.5]flex-initial justify-left items-left p-4">
+                <Link to="/ArcadioWhitepaper">Whitepaper</Link>
+            </div>
+            <div className="md:flex-[0.5]flex-initial justify-left items-left p-4">
+                <Link to="/ArcadioARDO">$ARDO</Link>
+            </div>
+            <div className="md:flex-[0.5]flex-initial justify-left items-left p-4">
+                <Link to="/ArcadioNFT">NFT</Link>
+            </div>
+            <div className="md:flex-[0.5]flex-initial justify-left items-left p-4">
+                <Link to="/ArcadioGamefi">Gamefi</Link>
             </div>
 
-            <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-                {["WhitePaper", "$ARDO", , "NFT", "GameFi"].map((item, index) => (
-                    <NavbarItem key={item + index} title={item} />
-                ))}
-            </ul>
-            <div className="md:flex-[1]flex-initial justify-center items-center">
+
+            <div className="md:flex-[0.5]flex-initial justify-center items-center p-2">
                 <img src={twitter} alt="logo" className="w-8 cursor-pointer" />
             </div>
-            <div className="md:flex-[0.5]flex-initial justify-center items-center">
+            <div className="md:flex-[0.5]flex-initial justify-center items-center p-2">
                 <img src={medium} alt="logo" className="w-8 cursor-pointer" />
             </div>
-            <div className="md:flex-[0.5]flex-initial justify-center items-center">
+            <div className="md:flex-[0.5]flex-initial justify-center items-center p-2">
                 <img src={telegram} alt="logo" className="w-8 cursor-pointer" />
             </div>
             {!currentAccount && (<button
@@ -52,7 +62,7 @@ const Navbar = () => {
             }
             {currentAccount && (<button
                 type="button"
-                className="flex md:flex-row justify-center items-center my-4 bg-[#0bd0b8] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]"
+                className="flex md:flex-row justify-center items-center my-4 bg-[#0bd0b8] p-2 rounded-full cursor-pointer hover:bg-[#2546bd]"
             >
                 <p className="text-white text-base font-semibold">Connected</p>
             </button>)
