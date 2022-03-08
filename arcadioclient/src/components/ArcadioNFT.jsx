@@ -4,38 +4,43 @@ import pinkleft from '../images/Pink.png';
 import { ContractContext } from '../context/ContractContext';
 
 const ArcadioNFT = () => {
-    const { handleMint, currentAccount, tokenMaxSupply, tokenMinted } = useContext(ContractContext);
+    const { handleMint, currentAccount, tokenMaxSupply, tokenMinted, mintPrice } = useContext(ContractContext);
 
     return (
         <div className="flex md:flex w-full justify-center items-center">
             <div className="md:flex-[0.5]flex-initial justify-center items-center">
                 <img src={pinkleft} alt="pinkleft" className="w-80 " />
             </div>
-            <div className="flex md:flex justify-center items-center">
-                {!currentAccount ? (
-                    <h1 className="text-2xl sm:text-3xl text-orange text-gradient py-1">
-                        Connect to wallet..
-                    </h1>
-                ) : (
-                    <div className="text-left mt-5 text-white font-light text-base">
-                        {tokenMinted} minted out of {tokenMaxSupply}
+            <section>
+                <div>
+                    <div className="flex md:flex justify-center items-center">
+                        {!currentAccount ? (
+                            <h1 className="text-2xl sm:text-2xl text-orange py-1">
+                                Mint Arcade Machine NFT!! <br />Connect to wallet..
+                            </h1>
+                        ) : (
+                            <div className="text-left text-2xl sm:text-2xl mt-5 text-white font-light text-base">
+                                Mint Price - {mintPrice} BNB <br />{tokenMinted} minted out of {tokenMaxSupply}
+                            </div>
+
+                        )}
                     </div>
-                )}
-            </div>
-            <div className="flex md:flex justify-center items-center">
-                {!currentAccount ? (
-                    <div></div>
-                ) : (
-                    <button
-                        type="button"
-                        onClick={handleMint}
-                        className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer hover:bg-[#044261]"
-                    >Mint NFT
-                    </button>
-                )}
-
-
-            </div>
+                </div>
+                <div >
+                    <div className="flex md:flex justify-center items-center">
+                        {!currentAccount ? (
+                            <div></div>
+                        ) : (
+                            <button
+                                type="button"
+                                onClick={handleMint}
+                                className="text-white text-2xl sm:text-2xl w-full mt-6 border-[2px] p-3 border-[#80c305] rounded-full cursor-pointer hover:bg-[#86c611]"
+                            >Mint NFT
+                            </button>
+                        )}
+                    </div>
+                </div>
+            </section>
             <div className="md:flex-[0.5]flex-initial justify-center items-center">
                 <img src={blueright} alt="blueside" className="w-80 " />
             </div>

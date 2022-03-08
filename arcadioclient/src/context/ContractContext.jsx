@@ -24,6 +24,7 @@ export const ContractProvider = ({ children }) => {
     const [currentAccount, setCurrentAccount] = useState('');
     const [tokenMaxSupply, setTokenMaxSupply] = useState('');
     const [tokenMinted, setTokenMinted] = useState('');
+    const [mintPrice, setTokenMintPrice] = useState('');
 
     const checkIfWalletIsConnected = async () => {
         try {
@@ -52,11 +53,14 @@ export const ContractProvider = ({ children }) => {
             const transactionContract = getEthereumContract();
             const maxSupply = await transactionContract.maxSupply();
             const totalSupply = await transactionContract.totalSupply();
+            const mintPriceWei = await transactionContract.price();
+            const mintPrice = ethers.utils.formatEther(mintPriceWei);
             console.log(parseInt(maxSupply));
             console.log(parseInt(totalSupply));
 
             setTokenMaxSupply(maxSupply.toString());
             setTokenMinted(totalSupply.toString());
+            setTokenMintPrice(mintPrice.toString());
 
             console.log("In Here 1");
 
@@ -90,7 +94,7 @@ export const ContractProvider = ({ children }) => {
     }, []);
 
     return (
-        <ContractContext.Provider value={{ connectWallet, handleMint, currentAccount, tokenMaxSupply, tokenMinted }}>
+        <ContractContext.Provider value={{ connectWallet, handleMint, currentAccount, tokenMaxSupply, tokenMinted, mintPrice }}>
             {children}
         </ContractContext.Provider>
     );

@@ -29,16 +29,19 @@ const Navbar = () => {
             <div className="md:flex-[0.5]flex-initial justify-left items-left p-1">
                 <Link to="/">ARCADIO</Link>
             </div>
-            <div className="md:flex-[0.5]flex-initial justify-left items-left p-4">
+            <div className="md:flex-[0.5]flex-initial justify-left items-left p-10">
+
+            </div>
+            <div className="md:flex-[0.5]flex-initial justify-left items-left p-2">
                 <Link to="/ArcadioWhitepaper">Whitepaper</Link>
             </div>
-            <div className="md:flex-[0.5]flex-initial justify-left items-left p-4">
+            <div className="md:flex-[0.5]flex-initial justify-left items-left p-2">
                 <Link to="/ArcadioARDO">$ARDO</Link>
             </div>
-            <div className="md:flex-[0.5]flex-initial justify-left items-left p-4">
+            <div className="md:flex-[0.5]flex-initial justify-left items-left p-2">
                 <Link to="/ArcadioNFT">NFT</Link>
             </div>
-            <div className="md:flex-[0.5]flex-initial justify-left items-left p-4">
+            <div className="md:flex-[0.5]flex-initial justify-left items-left p-2">
                 <Link to="/ArcadioGamefi">Gamefi</Link>
             </div>
 
