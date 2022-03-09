@@ -2,6 +2,7 @@ Arcadio Client
 
 CSS - Tailwindcss
 https://tailwindcss.com/docs
+Custom css -  index.css 
 
 Components Definition:
 ======================
@@ -54,6 +55,7 @@ cd arcadioclient
 > npm install --save ethers
 > Npm install -D tailwindcss postcss autoprefixer
 > Npx tailwindcss init -p
+> Npm install react-router-dom
 
 TO RUN
 ------
