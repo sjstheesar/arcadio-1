@@ -62,8 +62,6 @@ export const ContractProvider = ({ children }) => {
             setTokenMinted(totalSupply.toString());
             setTokenMintPrice(mintPrice.toString());
 
-            console.log("In Here 1");
-
         } catch (error) {
             console.log(error);
             throw new Error("No ethereum object")
@@ -76,17 +74,22 @@ export const ContractProvider = ({ children }) => {
         console.log(currentAccount);
         const transactionContract = getEthereumContract();
 
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
-        const address = await signer.getAddress();
+        try {
+            const provider = new ethers.providers.Web3Provider(ethereum);
+            const signer = provider.getSigner();
+            const address = await signer.getAddress();
 
-        const uri = "0.png";
-        const tokenId = await transactionContract.payToMint(uri, {
-            from: address,
-            value: ethers.utils.parseEther((0.1).toString()),
-        });
+            const uri = "3.png";
+            const tokenId = await transactionContract.payToMint(uri, {
+                from: address,
+                value: ethers.utils.parseEther((0.1).toString()),
+            });
 
-        console.log(parseInt(tokenId));
+            console.log(tokenId);
+        } catch (error) {
+            console.log(error);
+            throw new Error("Minting Failed!!")
+        }
     }
 
     useEffect(() => {
