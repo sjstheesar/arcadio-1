@@ -25,6 +25,7 @@ export const ContractProvider = ({ children }) => {
     const [tokenMaxSupply, setTokenMaxSupply] = useState('');
     const [tokenMinted, setTokenMinted] = useState('');
     const [mintPrice, setTokenMintPrice] = useState('');
+    const [mintStatus, setMintStatus] = useState(0);
 
     const checkIfWalletIsConnected = async () => {
         try {
@@ -49,7 +50,17 @@ export const ContractProvider = ({ children }) => {
 
             const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
             setCurrentAccount(accounts[0]);
+            getTokenDetails();
 
+        } catch (error) {
+            console.log(error);
+            throw new Error("No ethereum object")
+        }
+    }
+
+    const getTokenDetails = async () => {
+        try {
+            console.log("Calling for TokenDetails..");
             const transactionContract = getEthereumContract();
             const maxSupply = await transactionContract.maxSupply();
             const totalSupply = await transactionContract.totalSupply();
@@ -61,16 +72,15 @@ export const ContractProvider = ({ children }) => {
             setTokenMaxSupply(maxSupply.toString());
             setTokenMinted(totalSupply.toString());
             setTokenMintPrice(mintPrice.toString());
-
         } catch (error) {
-            console.log(error);
-            throw new Error("No ethereum object")
-
+            console.log("Getting Token Details Failed!!");
         }
+
     }
 
     const handleMint = async () => {
-        console.log("In here 2");
+        if (!currentAccount) return alert("Connect Wallet!!")
+        setMintStatus(1);
         console.log(currentAccount);
         const transactionContract = getEthereumContract();
 
@@ -79,13 +89,18 @@ export const ContractProvider = ({ children }) => {
             const signer = provider.getSigner();
             const address = await signer.getAddress();
 
-            const uri = "3.png";
+            const uri = `https://gateway.pinata.cloud/ipfs//${tokenMinted}.png`;
+            console.log(uri);
+
             const tokenId = await transactionContract.payToMint(uri, {
                 from: address,
                 value: ethers.utils.parseEther((0.1).toString()),
             });
-
+            await tokenId.wait();
             console.log(tokenId);
+            getTokenDetails();
+            setMintStatus(2);
+
         } catch (error) {
             console.log(error);
             throw new Error("Minting Failed!!")
@@ -97,7 +112,7 @@ export const ContractProvider = ({ children }) => {
     }, []);
 
     return (
-        <ContractContext.Provider value={{ connectWallet, handleMint, currentAccount, tokenMaxSupply, tokenMinted, mintPrice }}>
+        <ContractContext.Provider value={{ connectWallet, handleMint, currentAccount, tokenMaxSupply, tokenMinted, mintPrice, mintStatus }}>
             {children}
         </ContractContext.Provider>
     );

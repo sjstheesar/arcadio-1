@@ -6,4 +6,5 @@ export { default as ArcadioNFT } from './ArcadioNFT';
 export { default as ArcadioLounge } from './ArcadioLounge';
 export { default as ArcadioARDO } from './ArcadioARDO';
 export { default as ArcadioGamefi } from './ArcadioGamefi';
+export { default as Loader } from './Loader';
 export { default as Footer } from './Footer';

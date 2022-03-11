@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import blueright from '../images/Blue.png';
 import pinkleft from '../images/Pink.png';
+import { Loader } from './';
 import { ContractContext } from '../context/ContractContext';
 
 const ArcadioNFT = () => {
-    const { handleMint, currentAccount, tokenMaxSupply, tokenMinted, mintPrice } = useContext(ContractContext);
+    const { handleMint, currentAccount, tokenMaxSupply, tokenMinted, mintPrice, mintStatus } = useContext(ContractContext);
 
     return (
         <div className="flex md:flex w-full justify-center items-center">
@@ -20,7 +21,7 @@ const ArcadioNFT = () => {
                             </h1>
                         ) : (
                             <div className="text-left text-2xl sm:text-2xl mt-5 text-white font-light text-base">
-                                Mint Price - {mintPrice} BNB <br />{tokenMinted} minted out of {tokenMaxSupply}
+                                NFT Price - {mintPrice} BNB <br />{tokenMinted} minted out of {tokenMaxSupply}
                             </div>
 
                         )}
@@ -40,6 +41,22 @@ const ArcadioNFT = () => {
                         )}
                     </div>
                 </div>
+                <section class="wrapper">
+                    <div className="flex md:flex justify-center items-center">
+                        {mintStatus == 1 ? (
+                            <Loader />
+                        ) : (
+                            <div></div>
+                        )}
+                    </div>
+                    <div className="flex md:flex justify-center items-center">
+                        {mintStatus == 2 ? (
+                            <h1 className="text-2xl sm:text-2xl text-orange py-1"> Minting Success!! </h1>
+                        ) : (
+                            <div></div>
+                        )}
+                    </div>
+                </section>
             </section>
             <div className="md:flex-[0.5]flex-initial justify-center items-center">
                 <img src={blueright} alt="blueside" className="w-80 " />
