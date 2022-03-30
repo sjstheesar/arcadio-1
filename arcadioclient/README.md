@@ -58,7 +58,7 @@ cd arcadioclient
 > Npm install react-router-dom
 
 TO RUN
-------
+-------
 > npm run dev
 
 GO to browser and use :  http://localhost:3000/
