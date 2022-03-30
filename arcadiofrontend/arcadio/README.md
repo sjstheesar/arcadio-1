@@ -28,5 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Deploy on hosting
 Follow firebase deployment steps using CLI tools
+Make sure not to overwrite firebase.json file.
 
 
