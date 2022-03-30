@@ -1,0 +1,114 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<nav class="w-full absolute z-20">
+  <div class="mx-auto px-2 sm:px-6 lg:px-8 py-1">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 right-0 flex items-center lg:hidden">
+        <!-- Mobile menu button-->
+        <button (click)="toggleNavbar()" type="button"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!--
+              Icon when menu is closed.
+  
+              Heroicon name: outline/menu
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fff"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!--
+              Icon when menu is open.
+  
+              Heroicon name: outline/x
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+          <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fff"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex-1 flex justify-between space-x-4 md:items-stretch">
+        <div class="flex-shrink-0 flex">
+          <!-- <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/arcadio-mark-indigo-500.svg" alt="arcadio"> -->
+          <img class="h-8 w-auto" src="assets/images/logo.svg" width="100%" alt="arcadio">
+          <!-- <span class="font-nico-regular text-white text-2xl">Arcadio</span> -->
+        </div>
+        <div class="hidden lg:block sm:ml-6">
+          <div class="flex justify-center space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <div class="w-24 text-center">
+              <a href="https://docs.arcadio.network/" target="_blank"
+                class="text-white rounded-md text-base font-nico-regular font-medium" aria-current="page">Litepaper</a>
+            </div>
+
+            <div class="w-24 text-center">
+              <a href="#" class="rounded-md text-white text-left text-base font-nico-regular font-medium">
+                NFT
+              </a>
+              <p class="font-mohave-regular text-white text-right font-thin text-xs">Coming Soon</p>
+            </div>
+
+            <div class="w-24 text-center">
+              <a href="#ARDO" class="text-white rounded-md text-base font-nico-regular font-medium">$ARDO</a>
+            </div>
+
+            <div class="w-24 text-center">
+              <a href="#" class="text-white rounded-md text-left text-base font-nico-regular font-medium">
+                GameFi
+              </a>
+              <p class="font-mohave-regular text-white text-right font-thin text-xs">Coming Soon</p>
+            </div>
+            <!-- <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                <span class="sr-only">View notifications</span>
+               
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+              </button> -->
+
+            <div class="flex items-center space-x-2">
+              <a href="https://discord.gg/7Rdx3cYE" target="_blank"><img src="assets/images/social-media/discord.svg"
+                  width="30" height="30" alt=""></a>>
+              <a href="https://twitter.com/arcadio_network" target="_blank"><img
+                  src="assets/images/social-media/twitter.svg" width="30" height="30" alt=""></a>
+              <a href="https://medium.com/@arcadio.network" target="_blank"><img
+                  src="assets/images/social-media/medium.svg" width="30" height="30" alt=""></a>
+              <a href="https://t.me/arcadionetwork" target="_blank"><img src="assets/images/social-media/telegram.svg"
+                  width="30" height="30" alt=""></a>
+            </div>
+
+            <button class="text-white bg-blue h-10 rounded-full font-nico-regular font-regular text-base">
+              <img src="assets/images/connectwallet.svg" alt="">
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="lg:hidden rounded-lg bg-dark-blue" id="mobile-menu"
+    [ngClass]="{'hidden': !showMobileMenu, 'block': showMobileMenu}">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <a href="#" class="bg-pink text-white block px-3 py-2 rounded-md text-base font-nico-regular"
+        aria-current="page">Litepaper</a>
+
+      <a href="#"
+        class="text-white hover:bg-pink hover:text-white block px-3 py-2 rounded-md text-base font-nico-regular">NFT</a>
+
+      <a href="#"
+        class="text-white hover:bg-pink hover:text-white block px-3 py-2 rounded-md text-base font-nico-regular">$ARDO</a>
+
+      <a href="#"
+        class="text-white hover:bg-pink hover:text-white block px-3 py-2 rounded-md text-base font-nico-regular">GameFi</a>
+    </div>
+  </div>
+</nav>

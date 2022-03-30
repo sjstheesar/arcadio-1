@@ -1,0 +1,34 @@
+@font-face {
+    font-family: NicoMoji-Regular;
+    src: url(../font/NicoMoji-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Mohave-Regular;
+    src: url(../font/Mohave-Regular.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: Assistant-Regular;
+    src: url(../font/Assistant-Regular.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: PressStart2P-Regular;
+    src: url(../font/PressStart2P-Regular.ttf);
+    font-display: swap;
+}
+
+.font-nico-regular {
+    font-family: "NicoMoji-Regular", Helvetica, sans-serif;
+}
+.font-mohave-regular {
+    font-family: "Mohave-Regular", Helvetica, sans-serif;
+}
+.font-assitant-regular {
+    font-family: "Assistant-Regular", Helvetica, sans-serif;
+}
+.font-pressstart-regular {
+    font-family: "PressStart2P-Regular", Helvetica, sans-serif;
+}

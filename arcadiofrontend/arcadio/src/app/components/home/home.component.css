@@ -1,0 +1,149 @@
+.bg-banner {
+    background: #0d0c33 url(../../../assets/images/bg-banner.svg) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+}
+.gradient-arcadio {
+    background-image: linear-gradient(250deg, #fb6fc3, rgba(250, 214, 86, 0.9), rgba(123, 235, 243, 0.8));
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gradient-green {
+    background-image: linear-gradient(#d8fdeb, #38b478);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+
+  .gradient-pink {
+    background-image: linear-gradient(#ffffff, #f81cfc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+  .gradient-yellow {
+    background-image: linear-gradient(#ffffff, #fcb01c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+  .gradient-light-green {
+    background-image: linear-gradient(#d0ffdb, #aec714);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+  .gradient-green-rose {
+    background-image: linear-gradient(to bottom, #83f4be 18%, #f81cfc 187%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+  .gradient-rose {
+    /* background-image: linear-gradient(to bottom, #A97EE3 18%, #F224FA 187%); */
+    background-image: linear-gradient(180deg, #A97EE3 17.88%, #F81CFC 187.12%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+
+  .bg-blur {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+    opacity: .75;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .bg-green-wave {
+    background-image: url(../../../assets/images/green-wave.svg);
+  }
+  .bg-3 {
+    background-image: url(../../../assets/images/bg-3.svg);
+  }
+  .bg-4 {
+    background-image: url(../../../assets/images/bg-4.svg);
+  }
+  .bg-5 {
+    background-image: url(../../../assets/images/bg-5.svg);
+  }
+  .bg-8 {
+    background-image: url(../../../assets/images/bg-8.svg);
+  }
+  .bg-footer {
+    background-repeat: no-repeat;
+    background-color: #0d0c33;
+    background-position: 0 100%;
+    background-image: url(../../../assets/images/footer/footer-wave.svg);
+  }
+  .bg-gamer {
+    background-image: url(../../../assets/images/third-section/gamer-image.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    background-position: 300px -91px;
+  }
+
+  .gamer-img {
+    margin-right: -4rem;
+            margin-top: -10rem;
+  }
+
+  .h-box-img {
+    height: 300px !important;
+    width: 100%;
+  }
+ .bg-ball-blue {
+   background: url(../../../assets/images/third-section/ball-2.svg);
+ }
+ .bg-ball-pink {
+   background: url(../../../assets/images/third-section/ball-1.svg);
+ }
+
+ .waves {
+  color:peach;
+  font-size: 0;
+  line-height: 1.5;
+}
+.waves span {
+  font-size: 3rem;
+  display: inline-block;
+  animation: move 3s ease-in-out infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-30%, 0);
+  }
+  50% {
+    text-shadow: 0 25px 50px rgba(97, 57, 4, 0.75);
+  }
+  100% {
+    transform: translate(30%, 0);
+  }
+}
+
+.waves span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.waves span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.waves span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.waves span:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.waves span:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+.waves span:nth-child(7) {
+  animation-delay: 3s;
+}
+
+.waves span:nth-child(8) {
+  animation-delay: 3.5s;
+}
