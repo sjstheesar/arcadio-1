@@ -44,7 +44,7 @@
   }
   .gradient-rose {
     /* background-image: linear-gradient(to bottom, #A97EE3 18%, #F224FA 187%); */
-    background-image: linear-gradient(180deg, #A97EE3 17.88%, #F81CFC 187.12%);
+    background-image: linear-gradient(180deg, #A97EE3 17.88%, #f1a464 187.12%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
   }
@@ -103,7 +103,10 @@
  }
 
 .neon-flicker {
-  letter-spacing: 6px;
+  letter-spacing: 2px;
+}
+.flicker-v-v-v-slow{
+  animation: flicker 12s linear infinite;
 }
 
 .flicker-v-v-slow{
@@ -141,4 +144,25 @@
     0 0 40px rgb(212, 240, 111),
     0 0 80px rgb(147, 160, 26)
 }
-  
+
+.A-glow {
+  text-shadow:3px 0 10px #bb467c
+}
+.R-glow {
+  text-shadow:4px 0 10px #cf8655
+}
+.C-glow {
+  text-shadow:3px 0 10px #f3ad21
+}
+.A2-glow {
+  text-shadow:3px 0 10px #cfe924
+}
+.D-glow {
+  text-shadow:3px 0 10px #53e49e
+}
+.I-glow {
+  text-shadow:3px 0 10px #81c4eb
+}
+.O-glow {
+  text-shadow:3px 0 10px #d8c3f3
+}
