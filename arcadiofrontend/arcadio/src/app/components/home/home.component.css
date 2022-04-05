@@ -18,12 +18,12 @@
   }
 
   .gradient-pink {
-    background-image: linear-gradient(#ffffff, #f81cfc);
+    background-image: linear-gradient(#fcf5f5, #c11cc4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
   }
   .gradient-dark-pink {
-    background-image: linear-gradient(#fad1d1, #c4256f);
+    background-image: linear-gradient(#fad1d1, #da6da0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
   }
