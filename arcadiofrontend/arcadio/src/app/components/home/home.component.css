@@ -1,5 +1,5 @@
 .bg-banner {
-    background: #0d0c33 url(../../../assets/images/bg-banner.svg) no-repeat center;
+    background: url(../../../assets/images/bg-arcade.gif) no-repeat center;
     background-size: cover;
     min-height: 100vh;
 }
