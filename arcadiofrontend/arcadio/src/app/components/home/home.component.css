@@ -61,20 +61,20 @@
     background-image: url(../../../assets/images/green-wave.svg);
   }
   .bg-3 {
-    background-image: url(../../../assets/images/bg-3.svg);
+    background-image: linear-gradient(#300F60, #300F60);
   }
   .bg-4 {
-    background-image: url(../../../assets/images/bg-4.svg);
+    background-image: linear-gradient(#300F60, #34106b);
   }
   .bg-5 {
-    background-image: url(../../../assets/images/bg-5.svg);
+    background-image: linear-gradient(#300F60, #34106b);
   }
   .bg-8 {
-    background-image: url(../../../assets/images/bg-8.svg);
+    background-image: linear-gradient(#300F60, #34106b);
   }
   .bg-footer {
     background-repeat: no-repeat;
-    background-color: #0d0c33;
+    background-color: #300F60;
     background-position: 0 100%;
     background-image: url(../../../assets/images/footer/footer-wave.svg);
   }
